@@ -1,8 +1,5 @@
-import numpy as np
-import pandas as pd
-import re
 from analyzePDF import analyzePDF
-FILENAME = 'file.pdf'
+FILENAME = 'F:/BRAC Undergraduate Courses/Thesis/Project/ParserPDF/file.pdf'
 
 def analyze_pdf(file):
     result = analyzePDF(file)
@@ -30,19 +27,19 @@ def distribute_data_to_label(analyzed_list):
     del column_attributes[0:3]
     del column_attributes_corr_val[0:3]
     
-    print(final_dict)   
-    print(column_attributes)
-    print(column_attributes_corr_val)
+    # print(final_dict)   
+    # print(column_attributes)
+    # print(column_attributes_corr_val)
 
     return final_dict, column_attributes, column_attributes_corr_val
 
 
-def main():
+def run():
     filename = [FILENAME]
     result = analyze_pdf(filename)
     dictionary, columns, values = distribute_data_to_label(result)
-    # print(result)
+    print(values)
 
-
-if __name__ == '__main__':
-    main()
+run()
+# if __name__ == '__main__':
+#     main()
