@@ -1,1 +1,6 @@
-# ATX1.0
+# ATX1.0: Automated PDF Architecture Analysis and CSV Conversion
+ATX is a comprehensive automation tool designed for another web project of mine, focusing on extracting and refining internal architectural information from PDF files. It processes this information to generate a CSV file, tailored for use with enhanced machine learning model APIs. ATX leverages the capabilities of the PDFID module, originally a creation of Didier Stevens and later adapted by Matteo Lodi for library use.
+**Key Components:**
+1. **analyzePDF.py**: This script utilizes the `pdfid` library to meticulously analyze PDF files. It configures the scanning options to enable thorough scanning and output the results in a JSON format. The primary functionality includes analyzing PDF file characteristics such as metadata, structure, embedded objects, and scripts.
+
+2. **parseToCSV.py**: This script is integral to the process, focusing on data extraction and parsing from PDFs. It reads, processes, and extracts key-value pairs from the PDF, then systematically filters and organizes this data. The script skillfully excludes certain attributes like 'version', 'filename', and 'header' to streamline the dataset, ultimately converting and presenting the refined data in a CSV format.
